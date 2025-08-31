@@ -1,6 +1,6 @@
-import { FlyNoWays } from './behaviour/fly/flyNoWay';
-import MuteQuack from './behaviour/quack/muteQuack';
-import { Duck } from './Duck';
+import { FlyNoWays } from './behavior/fly/flyNoWay';
+import MuteQuack from './behavior/quack/muteQuack';
+import { Duck } from './duck';
 
 export class WoodenDuck extends Duck {
     constructor() {

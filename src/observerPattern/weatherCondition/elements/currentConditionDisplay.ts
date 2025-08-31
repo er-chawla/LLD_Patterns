@@ -1,0 +1,28 @@
+import type { WeatherContract } from '../contract/weatherContract';
+import type { DisplayElement } from './displayElement';
+import type { Observer } from '../observer/observer';
+import type { WeatherData } from '../subject/weatherData';
+
+export class CurrentConditionDisplay implements Observer, DisplayElement {
+    id: string;
+    private temperature!: number;
+    private humidity!: number;
+    private weatherData: WeatherData;
+
+    constructor(weatherData: WeatherData) {
+        this.id = new Date().getTime().toString();
+        this.weatherData = weatherData;
+        this.weatherData.registerObserver(this);
+    }
+
+    update(weatherInfo: WeatherContract): void {
+        this.temperature = weatherInfo.pressure;
+        this.humidity = weatherInfo.humidity;
+        this.display();
+    }
+    display(): void {
+        console.log(
+            `Current condition: + ${this.temperature} + F degree and ${this.humidity} % humidity`
+        );
+    }
+}

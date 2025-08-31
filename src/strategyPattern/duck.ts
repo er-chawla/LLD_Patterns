@@ -1,5 +1,5 @@
-import type { FlyBehavior } from './behaviour/fly/flyBehavior';
-import type { QuackBehavior } from './behaviour/quack/quackBehavior';
+import type { FlyBehavior } from './behavior/fly/flyBehavior';
+import type { QuackBehavior } from './behavior/quack/quackBehavior';
 
 export abstract class Duck {
     flyBehavior: FlyBehavior;
