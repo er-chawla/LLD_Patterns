@@ -7,7 +7,8 @@
         "dev": "vite",
         "preview": "vite preview",
         "build": "tsc && vite build",
-        "start:observer:weatherData": "vite-node ./src/observerPattern/weatherCondition/index.ts"
+        "start:observer:weatherData": "vite-node ./src/observerPattern/weatherCondition/index.ts",
+        "start:observer:stockPriceTracker": "vite-node ./src/observerPattern/stockPriceTracker/index.ts"
     },
     "devDependencies": {
         "typescript": "~5.8.3",
