@@ -2,6 +2,7 @@ import type { WeatherContract } from '../contract/weatherContract';
 import type { DisplayElement } from './displayElement';
 import type { Observer } from '../observer/observer';
 import type { WeatherData } from '../subject/weatherData';
+import { v4 } from 'uuid';
 
 export class CurrentConditionDisplay implements Observer, DisplayElement {
     id: string;
@@ -10,7 +11,7 @@ export class CurrentConditionDisplay implements Observer, DisplayElement {
     private weatherData: WeatherData;
 
     constructor(weatherData: WeatherData) {
-        this.id = new Date().getTime().toString();
+        this.id = v4();
         this.weatherData = weatherData;
         this.weatherData.registerObserver(this);
     }
