@@ -9,14 +9,19 @@
         "build": "tsc && vite build",
         "start:observer:weatherData": "vite-node ./src/observerPattern/weatherCondition/index.ts",
         "start:observer:stockPriceTracker": "vite-node ./src/observerPattern/stockPriceTracker/index.ts",
-        "start:decorator:coffeePayment": "vite-node ./src/decoratorPattern/coffeePayment/index.ts"
+        "start:decorator:coffeePayment": "vite-node ./src/decoratorPattern/coffeePayment/index.ts",
+        "start:decorator:auth": "vite-node ./src/decoratorPattern/auth/app.ts"
     },
     "devDependencies": {
+        "@types/express": "^5.0.3",
         "typescript": "~5.8.3",
         "vite": "^7.1.2",
         "vite-node": "^3.2.4"
     },
     "dependencies": {
+        "@types/body-parser": "^1.19.6",
+        "body-parser": "^2.2.0",
+        "express": "^5.1.0",
         "uuid": "^11.1.0"
     }
 }

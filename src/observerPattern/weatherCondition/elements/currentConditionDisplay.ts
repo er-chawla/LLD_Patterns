@@ -22,6 +22,7 @@ export class CurrentConditionDisplay implements Observer, DisplayElement {
         this.display();
     }
     display(): void {
+        Number.MIN_SAFE_INTEGER;
         console.log(
             `Current condition: + ${this.temperature} + F degree and ${this.humidity} % humidity`
         );
