@@ -10,7 +10,8 @@
         "start:observer:weatherData": "vite-node ./src/observerPattern/weatherCondition/index.ts",
         "start:observer:stockPriceTracker": "vite-node ./src/observerPattern/stockPriceTracker/index.ts",
         "start:decorator:coffeePayment": "vite-node ./src/decoratorPattern/coffeePayment/index.ts",
-        "start:decorator:auth": "vite-node ./src/decoratorPattern/auth/app.ts"
+        "start:decorator:auth": "vite-node ./src/decoratorPattern/auth/app.ts",
+        "start:factory:pizzas": "vite-node ./src/factoryPattern/pizzaStore/index.ts"
     },
     "devDependencies": {
         "@types/express": "^5.0.3",
