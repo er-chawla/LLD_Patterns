@@ -1,0 +1,18 @@
+import { PizzaIngredientFactory } from '../pizzaIngredients/pizzaIngredientFactory';
+import { Pizza } from './pizza';
+
+export class ClamPizza extends Pizza {
+    pizzaIngredientFactory: PizzaIngredientFactory;
+    constructor(pizzaIngredientFactory: PizzaIngredientFactory) {
+        super();
+        this.pizzaIngredientFactory = pizzaIngredientFactory;
+    }
+    prepare(): void {
+        console.log('Preparing the ' + this.name);
+
+        this.pizzaIngredientFactory.createDough();
+        this.pizzaIngredientFactory.createSauces();
+        this.pizzaIngredientFactory.createCheese();
+        this.pizzaIngredientFactory.createClams();
+    }
+}
